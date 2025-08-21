@@ -1,36 +1,46 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# London Plumbing & Heating Systems — Next.js Template
 
-## Getting Started
+A production-ready, SEO-focused Next.js App Router template for local trades businesses. Content and routes are driven by a single `site.config.ts` and light MD/MDX content.
 
-First, run the development server:
-
+## Quick start
+1. Install dependencies
+```bash
+npm i
+```
+2. Set environment
+Create `.env.local`:
+```env
+RESEND_API_KEY=""
+NEXT_PUBLIC_SITE_URL="https://example.com"
+```
+3. Run dev server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+4. Build
+```bash
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Retheme/rebrand
+Edit `site.config.ts`. Changing the business name, phones, and address will update the entire site (header, footer, CTAs, services, contact links, schema).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- Services: update the `services` array (slug, name, image, features)
+- Testimonials: update `testimonials`
+- Partner logos: add images to `public/images/brands` and update `partnerLogos`
+- Blog: add `.mdx` files to `src/content/blog`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech
+- Next.js App Router + TypeScript
+- Tailwind CSS v4
+- Next/Image for optimization
+- Simple UI primitives (button/input/card/accordion)
+- Zod for client/server validation
+- Sitemap/robots via `next-sitemap`
 
-## Learn More
+## Deploy
+- Vercel: set `NEXT_PUBLIC_SITE_URL` to your domain
+- Optional email via Resend: set `RESEND_API_KEY`
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+This template provides generic placeholder content and no third-party brand assets.
