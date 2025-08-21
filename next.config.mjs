@@ -9,6 +9,8 @@ const nextConfig = {
 			},
 		],
 	},
+	// Fix for Next.js 15 Vercel compatibility
+	output: 'standalone',
 };
 
 export default nextConfig;
